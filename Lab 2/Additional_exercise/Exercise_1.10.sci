@@ -13,29 +13,30 @@ Fs = Rb/b;
 T = 1/Fs;
 Ffold = Fs/2;
 
-disp(b, "a) Bits per sample:");
-disp(Fs, "   Sampling frequency (Hz):");
-disp(Ffold, "   Folding frequency (Hz):");
+mprintf("a) Bits per sample             : %g\n", b);
+mprintf("   Sampling frequency (Hz)     : %g\n", Fs);
+mprintf("   Folding frequency (Hz)      : %g\n", Ffold);
 
 // b
 Fnyquist = 2*max([F1 F2]);
-disp(Fnyquist, "b) Nyquist sampling rate (samples/s):");
+mprintf("b) Nyquist sampling rate       : %g samples/s\n", Fnyquist);
 
 // c
 w1 = 2*%pi*F1/Fs;
 w2 = 2*%pi*F2/Fs;
 
-disp(w1/%pi, "c) w1/pi:");
-disp(w2/%pi, "   w2/pi:");
-disp("After folding: x(n) = 3*cos(0.6*pi*n) + 2*cos(0.2*pi*n)");
+mprintf("c) w1/pi                       : %g\n", w1/%pi);
+mprintf("   w2/pi                       : %g\n", w2/%pi);
+mprintf("   After folding               : x(n) = 3*cos(0.6*pi*n) + 2*cos(0.2*pi*n)\n");
 
 // d
 Xmax = 3 + 2;
 Xmin = -Xmax;
 Delta = (Xmax - Xmin)/(L - 1);
 
-disp(Delta, "d) Quantization resolution Delta (V):");
+mprintf("d) Quantization resolution (V) : %g\n", Delta);
 
+// Vẽ đồ thị
 t = linspace(0, 0.02, 2000);
 n = 0:20;
 

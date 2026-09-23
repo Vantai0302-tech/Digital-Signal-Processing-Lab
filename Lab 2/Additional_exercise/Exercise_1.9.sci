@@ -11,23 +11,24 @@ F2 = 720*%pi/(2*%pi);
 Fnyquist = 2*max([F1 F2]);
 Ffold = Fs/2;
 
-disp(Fnyquist, "a) Nyquist sampling rate (samples/s):");
-disp(Ffold, "b) Folding frequency (Hz):");
+mprintf("a) Nyquist sampling rate : %g samples/s\n", Fnyquist);
+mprintf("b) Folding frequency     : %g Hz\n", Ffold);
 
 // c
 w1 = 2*%pi*F1/Fs;
 w2 = 2*%pi*F2/Fs;
 
-disp(w1/%pi, "c) w1/pi:");
-disp(w2/%pi, "   w2/pi:");
-disp("Simplified signal: x(n) = -2*sin(0.8*pi*n)");
+mprintf("c) w1/pi                 : %g\n", w1/%pi);
+mprintf("   w2/pi                 : %g\n", w2/%pi);
+mprintf("   Simplified signal     : x(n) = -2*sin(0.8*pi*n)\n");
 
 // d
 F = w1*Fs/(2*%pi);
 
-disp(F, "d) Reconstructed frequency (Hz):");
-disp("Reconstructed signal: ya(t) = -2*sin(480*pi*t)");
+mprintf("d) Reconstructed freq    : %g Hz\n", F);
+mprintf("   Reconstructed signal  : ya(t) = -2*sin(480*pi*t)\n");
 
+// Phan do thi
 t = linspace(0, 0.025, 2000);
 n = 0:15;
 
