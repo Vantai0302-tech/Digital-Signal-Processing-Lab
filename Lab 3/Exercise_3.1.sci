@@ -3,6 +3,10 @@ close;
 clear;
 
 function [yn, yorigin] = delay (xn, xorigin, k)
+    if (k <= 0) then 
+        error("k must be greater than 0");
+    end
+
     yn = xn;
     yorigin = xorigin - k;
     
@@ -35,3 +39,7 @@ function [yn, yorigin] = delay (xn, xorigin, k)
     xtitle("Delay signal y(n) = x(n-k)", "n", "y(n)");
     xgrid();
 endfunction
+
+[yn, yorigin] = delay ([1,  -2,  3,  6], 3, 1);
+yn
+yorigin
