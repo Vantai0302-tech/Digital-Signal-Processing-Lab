@@ -14,7 +14,7 @@ function [yn, yorigin] = advance(xn, xorigin, k)
     nx = (1:N) - xorigin;
     ny = (1:N) - yorigin;
 
-     nmin = min([nx, ny]) - 1;
+    nmin = min([nx, ny]) - 1;
     nmax = max([nx, ny]) + 1;
     vmin = min([0, xn]) - 1;
     vmax = max([0, xn]) + 1;
