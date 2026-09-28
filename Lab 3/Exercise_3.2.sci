@@ -39,7 +39,3 @@ function [yn, yorigin] = advance(xn, xorigin, k)
     xtitle("Advance signal y(n) = x(n+k)", "n", "y(n)");
     xgrid();
 endfunction
-
-[yn, yorigin] = advance ([1,  -2,  3,  6], 3, 1);
-yn
-yorigin

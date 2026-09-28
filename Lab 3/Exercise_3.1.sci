@@ -39,7 +39,3 @@ function [yn, yorigin] = delay (xn, xorigin, k)
     xtitle("Delay signal y(n) = x(n-k)", "n", "y(n)");
     xgrid();
 endfunction
-
-[yn, yorigin] = delay ([1,  -2,  3,  6], 3, 1);
-yn
-yorigin

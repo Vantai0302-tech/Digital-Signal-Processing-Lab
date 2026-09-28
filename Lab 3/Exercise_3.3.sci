@@ -37,6 +37,3 @@ function [yn, yorigin] = fold (xn, xorigin)
     xgrid();
 endfunction
 
-[yn, yorigin] = fold ([1,  -2,  3,  6], 3);
-yn
-yorigin
