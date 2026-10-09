@@ -18,6 +18,15 @@ function [yn, yorigin] = multi (x1n, x1origin, x2n, x2origin)
     yn = x1 .* x2;
     yorigin = 1 - n_begin;
 
+    mprintf("yn = [");
+    for i = 1:length(yn)
+        if i > 1 then
+            mprintf(", ");
+        end
+        mprintf("%g", yn(i));
+    end
+    mprintf("]\nyorigin = %g\n", yorigin);
+
     vmin = min([0, x1, x2, yn]) - 1;
     vmax = max([0, x1, x2, yn]) + 1;
 

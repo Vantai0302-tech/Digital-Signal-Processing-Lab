@@ -9,6 +9,15 @@ function [yn, yorigin] = advance(xn, xorigin, k)
 
     yn = xn;
     yorigin = xorigin + k;
+
+    mprintf("yn = [");
+    for i = 1:length(yn)
+        if i > 1 then
+            mprintf(", ");
+        end
+        mprintf("%g", yn(i));
+    end
+    mprintf("]\nyorigin = %g\n", yorigin);
     
     N = length(xn);
     nx = (1:N) - xorigin;

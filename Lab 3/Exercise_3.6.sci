@@ -15,6 +15,15 @@ function [yn, yorigin] = convolution (xn, xorigin, hn, horigin)
     end
 
     yorigin = xorigin + horigin -  1;
+
+    mprintf("yn = [");
+    for i = 1:length(yn)
+        if i > 1 then
+            mprintf(", ");
+        end
+        mprintf("%g", yn(i));
+    end
+    mprintf("]\nyorigin = %g\n", yorigin);
     
     nx = (1:nx) - xorigin;
     nh = (1:nh) - horigin;

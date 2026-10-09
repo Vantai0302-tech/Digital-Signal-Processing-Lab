@@ -8,6 +8,15 @@ function [yn, yorigin] = fold (xn, xorigin)
     yn = xn($:-1:1);
     yorigin = N + 1 - xorigin;
 
+    mprintf("yn = [");
+    for i = 1:length(yn)
+        if i > 1 then
+            mprintf(", ");
+        end
+        mprintf("%g", yn(i));
+    end
+    mprintf("]\nyorigin = %g\n", yorigin);
+
     nx = (1:N) - xorigin;
     ny = (1:N) - yorigin;
 
