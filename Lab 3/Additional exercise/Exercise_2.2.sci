@@ -53,7 +53,7 @@ function y = x(n)
     h = gce();
     h.children.thickness = 3;
     a = gca();
-    xtitle("a) x(n + 2)","n","y3(n)");
+    xtitle("c) x(n + 2)","n","y3(n)");
     xgrid();
 
     // d) Signal x(n)u(2 - n)
