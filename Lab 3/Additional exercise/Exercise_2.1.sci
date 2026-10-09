@@ -2,7 +2,7 @@ clc;
 close;
 clear;
 
-function y = x(n);
+function y = x(n)
     y = zeros(1, length(n));
     for i = 1 : length(n)
         if (n(i) >= -3 && n(i) <= -1) then
