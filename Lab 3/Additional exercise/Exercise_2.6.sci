@@ -24,7 +24,7 @@ function y = x(n)
     y1 = zeros(1, length(n));
 
     for i = 1:length(n)
-        if (n(i)^2 >= 0 & n(i)^2) <= 3 then
+        if (n(i)^2 >= 0 & n(i)^2 <= 3) then
             y1(i) = 1;
         end
     end
