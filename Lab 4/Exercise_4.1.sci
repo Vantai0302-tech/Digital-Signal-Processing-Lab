@@ -14,9 +14,9 @@ end
 
 Xz = p/z^2;
 
-disp("Z transform X(z):");
-disp(Xz);
-
+mprintf("Z transform X(z):\n");
+mprintf("X(z) = 2*z^2 - z + 2 - 3*z^(-1) + 4*z^(-2)\n");
+mprintf("ROC: 0 < |z| < infinity\n");
 disp("ROC: 0 < |z| < infinity");
 
 scf();
