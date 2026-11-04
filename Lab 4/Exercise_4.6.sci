@@ -13,7 +13,6 @@ nx = 0:Nx-1;
 ny = 0:Ny-1;
 
 // Folding and shifting
-
 y_fold = zeros(1, Ny);
 
 for n = 0:Ny-1
@@ -28,7 +27,6 @@ for n = 0:Ny-1
 end
 
 //Matrix method
-
 H = zeros(Ny, Nx);
 
 for column = 1:Nx;
